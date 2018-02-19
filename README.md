@@ -28,15 +28,15 @@ Coordenada X, inteiro positivo, não nulo;
 
 Coordenada Y, inteiro positivo, não nulo;
 
-## Serviço para listar todos os POIs cadastrados
+## Pontos de Interesse
 
 Serviço que retornará uma lista com todos os Pontos de Interesse cadastrados.
 
 https://xy-inc-gps-client.herokuapp.com/locations
 
-## Serviço para listar POIs por proximidade.
+## Busca POIs por Proximidade
 
-Serviço que retornará uma lista com todos os Pontos de Interesse que estejam a uma distância menor ou igual a determinado ponto, dada uma distancia especifica, bem como, as coordenadas X e Y do ponto.
+Retorna uma lista com todos os Pontos de Interesse que estejam a uma distância menor ou igual a determinado ponto.
 
 https://xy-inc-gps-client.herokuapp.com/locations
 
