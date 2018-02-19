@@ -4,11 +4,11 @@ Empresa especializada na produção de excelentes receptores GPS (Global Positio
 
 # Aplicação
 
-Plataforma criada apra auxiliar as pessoas na localização de Pontos de Interesse (POIs).
+Plataforma criada apra auxiliar as pessoas na localização de Pontos de Interesse (POIs). As telas foram criadas de forma a permitir a navegação e utilização dos recursos previstos pela plataforma.
 
 # Ambiente
 
-A plataforma foi disponibizada na nuvem do Heroku como forma de viabilizar os testes de utilização, no entanto, o ambiente não viabilizou o correto uso do web framework bootstrap presente no projeto e disponível nos arquivos do projeto.
+A plataforma foi disponibizada na nuvem do Heroku como forma de viabilizar os testes de utilização, no entanto, o ambiente não viabilizou o correto uso do web framework bootstrap presente e disponível nos arquivos do projeto.
 
 http://heroku.com
 
