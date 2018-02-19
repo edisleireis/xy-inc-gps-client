@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+<title>XY Inc - Pontos de Interesse</title> 
+<link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.css" th:href="@{http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.css}" rel="stylesheet" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-6 col-lg-6">
+
+		    <h1>Cadastrar Ponto de Interesse</h1>
+
+		    <p class="h6" th:text="${register_error}" />
+
+			<form action="save-poi.html" th:attr="action=@{/save-poi}" method="post">
+
+				<label class="caption" style="padding-top: 10px;">Ponto de Interesse</label>
+				<input type="text" class="form-control" id="location" name="location" placeholder="Informe o nome do Ponto de Interesse" required="required" />
+
+				<label class="caption" style="padding-top: 10px;">Coordenada X</label>
+				<input type="number" class="form-control" id="coordinate_x" name="coordinate_x" placeholder="Informe a Coordenada X" required="required" />
+
+				<label class="caption" style="padding-top: 20px;">Coordenada Y</label>
+				<input type="number" class="form-control" id="coordinate_y" name="coordinate_y" placeholder="Informe a Coordenada Y" required="required" />
+
+				<div class="form-group" style="padding-top: 20px; padding-bottom: 30px;">
+				    <input type="submit" class="btn btn-primary pull-right margin-button" value="CONFIRMAR O NOVO CADASTRO" />
+				</div>
+
+			</form>
+
+			<div class="form-group" style="padding-bottom: 50px;">
+				<form action="filtered.html" th:attr="action=@{/locations}" method="get">
+				    <input type="submit" class="btn btn-link pull-right margin-button" value="CANCELAR" />
+				</form>
+		    </div>
+
+	    </div>
+
+    </div>
+
+</body>
+</html>

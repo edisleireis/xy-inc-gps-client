@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+<title>XY Inc - Pontos de Interesse</title> 
+<link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.css" th:href="@{http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.css}" rel="stylesheet" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-6 col-lg-6">
+
+		    <h1>Pontos de Interesse</h1>
+		    <p class="h6" th:text="${filter}" />
+
+		    <table class="table">
+				<thead>
+			    	<tr>
+			    		<th>Ponto de Interesse</th>
+			    		<th style="text-align: center;">Coordenada X</th>
+			    		<th style="text-align: center;">Coordenada Y</th>
+			    	</tr>
+				</thead>
+				<tbody>
+			    	<tr th:each="local : ${locations}">
+			    		<td th:text="${local.location}">-</td>
+			    		<td style="text-align: center;" th:text="${local.coordinate_x}">-</td>
+			    		<td style="text-align: center;" th:text="${local.coordinate_y}">-</td>
+			    	</tr>
+				</tbody>
+		    </table>
+
+    		<div class="form-group" style="padding-top: 20px; padding-bottom: 50px;">
+				<form action="new-poi.html" th:attr="action=@{/new-poi}">
+				    <input type="submit" class="btn btn-primary pull-right margin-button" value="Cadastrar novo Ponto de Interesse"/>
+				</form>
+			</div>
+
+		    <h3>Busca POIs por Proximidade</h3>
+		    <p class="h6" th:text="${filter_error}" />
+
+			<form action="filtered.html" th:attr="action=@{/filtered}" method="post">
+
+				<label class="caption" style="padding-top: 10px;">Coordenada X</label>
+				<input type="number" class="form-control" id="coordinate_x" name="coordinate_x" placeholder="Informe a Coordenada X" required="required" />
+
+				<label class="caption" style="padding-top: 20px;">Coordenada Y</label>
+				<input type="number" class="form-control" id="coordinate_y" name="coordinate_y" placeholder="Informe a Coordenada Y" required="required" />
+
+				<label class="caption" style="padding-top: 20px;">Distância Máxima</label>
+				<input type="number" class="form-control" id="distance" name="distance" placeholder="Informe a Distância Máxima" required="required" />
+
+				<div class="form-group" style="padding-top: 20px; padding-bottom: 50px;">
+				    <input type="submit" class="btn btn-primary pull-right margin-button" value="Buscar os POIs pela Proximidade"/>
+				</div>
+
+			</form>
+
+	    </div>
+
+    </div>
+
+</body>
+</html>
