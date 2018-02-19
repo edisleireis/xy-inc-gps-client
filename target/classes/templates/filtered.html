@@ -48,13 +48,13 @@
 			<form action="filtered.html" th:attr="action=@{/filtered}" method="post">
 
 				<label class="caption" style="padding-top: 10px;">Coordenada X</label>
-				<input type="number" class="form-control" id="coordinate_x" name="coordinate_x" placeholder="Informe a Coordenada X" required="required" />
+				<input type="number" class="form-control" id="coordinate_x" name="coordinate_x" placeholder="Informe a Coordenada X" required="required" min="0" />
 
 				<label class="caption" style="padding-top: 20px;">Coordenada Y</label>
-				<input type="number" class="form-control" id="coordinate_y" name="coordinate_y" placeholder="Informe a Coordenada Y" required="required" />
+				<input type="number" class="form-control" id="coordinate_y" name="coordinate_y" placeholder="Informe a Coordenada Y" required="required" min="0" />
 
 				<label class="caption" style="padding-top: 20px;">Distância Máxima</label>
-				<input type="number" class="form-control" id="distance" name="distance" placeholder="Informe a Distância Máxima" required="required" />
+				<input type="number" class="form-control" id="distance" name="distance" placeholder="Informe a Distância Máxima" required="required" min="1" />
 
 				<div class="form-group" style="padding-top: 20px; padding-bottom: 50px;">
 				    <input type="submit" class="btn btn-primary pull-right margin-button" value="Buscar os POIs pela Proximidade"/>
