@@ -8,7 +8,7 @@ Plataforma criada apra auxiliar as pessoas na localização de Pontos de Interes
 
 # Ambiente
 
-A plataforma foi disponibizada na nuvem do Heroku como forma de viabilizar os testes de utilização, no entanto, o ambiente não viabilizou o correto uso do web framework bootstrap presente e disponível nos arquivos do projeto.
+A plataforma foi disponibizada na nuvem do Heroku como forma de viabilizar os testes de utilização.
 
 http://heroku.com
 
